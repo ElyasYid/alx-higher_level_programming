@@ -1,0 +1,62 @@
+::
+	>>> add_integer = __import__('0-add_integer').add_integer
+	>>> add_integer(5, 12)
+	17
+
+
+::
+
+
+	>>> add_integer(5, -12)
+	-7
+
+
+function will typecast floats in to integers
+
+
+::
+
+	>>> add_integer(5.0, 12.456)
+	17
+
+
+::
+
+	>>> add_integer(- 5.8, -12.333)
+	-17
+
+digits and floats can be combined
+
+::
+
+	>>> add_integer(-5.122, 12)
+	7
+
+non-float and non-integer input will raise a TypeError message
+
+::
+
+	>>> add_integer("HODO", 12)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+::
+	
+	>>> add_integer(5, "HODO")
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+if both are not then only first instance will be raised
+
+::
+
+	>>> add_integer("HODO", "FODO")
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+if second input isnot given it will assume default
+
+::
+
+	>>> add_integer(5)
+	103
