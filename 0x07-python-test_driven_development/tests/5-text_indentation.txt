@@ -1,0 +1,62 @@
+::
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+    >>> text_indentation("Python sucks?")
+    Python sucks?
+    <BLANKLINE>
+
+No spaces are printed at the beginning of a line.
+
+::
+
+    >>> text_indentation("  i am wale.")
+    i am wale.
+    <BLANKLINE>
+
+::
+
+    >>> text_indentation("put it on me.   ")
+    put it on me.
+    <BLANKLINE>
+
+::
+
+    >>> text_indentation("    girl drop it.    to the floor?   ")
+    girl drop it.
+    <BLANKLINE>
+    to the floor?
+    <BLANKLINE>
+
+::
+
+    >>> text_indentation("just bought a cadillac, throw some ds on that b")
+    just bought a cadillac, throw some ds on that b
+
+::
+
+    >>> text_indentation("Tight no slack.\n\nJust bought a cadillac.")
+    Tight no slack.
+    <BLANKLINE>
+    <BLANKLINE>
+    <BLANKLINE>
+    Just bought a cadillac.
+    <BLANKLINE>
+
+
+::
+
+    >>> text_indentation(123)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+::
+
+    >>> text_indentation({"pimp": 1, "rolex": 2})
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+::
+
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    TypeError: text must be a string
