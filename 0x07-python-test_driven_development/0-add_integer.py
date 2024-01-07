@@ -3,7 +3,8 @@
 """Defines an integer addition function"""
 
 
-def add_integer(a,b=98):
+def add_integer(a, b=98):
+
     """Return integer addition of a and b.
 
     Float typecasted to int before function operates.
