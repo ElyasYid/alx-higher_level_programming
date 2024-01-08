@@ -1,0 +1,87 @@
+Test for my class
+
+
+	>>> MyList = __import__('1-my_list').MyList
+	>>>
+
+::
+
+	>>> my_list = MyList()
+	>>> my_list.append(8)
+	>>> my_list.append(6)
+	>>> my_list.append(11)
+	>>> my_list.append(2)
+	>>> print(my_list)
+	[8, 6, 11, 2]
+	>>> my_list.print_sorted()
+	[2, 6, 8, 11]
+	>>> print(my_list)
+	[8, 6, 11, 2]
+	>>>
+
+::
+
+	>>> MyList = __import__('1-my_list').MyList
+	>>> my_list4.print_sorted()
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in <module>
+	NameError: name 'my_list4' is not defined
+	>>>
+
+::
+
+	>>> ass = [12, 67, 90]
+	>>> my_list = MyList(ass)
+	>>> my_list.print_sorted()
+	[12, 67, 90]
+	>>>
+
+::
+
+	>>> ass = []
+	>>> my_list = MyList(ass)
+	>>> my_list.print_sorted()
+	[]
+	>>>
+
+::
+
+	>>> my_list = MyList()
+	>>> my_list.append(1919)
+	>>> my_list.print_sorted()
+	[1919]
+	>>> print(my_list)
+	[1919]
+	>>>
+
+::
+
+	>>> my_list_tori = MyList()
+	>>> my_list_tori.append(14)
+	>>> my_list_tori.append(14)
+	>>> my_list_tori.append(14)
+	>>> my_list_tori.print_sorted()
+	[14, 14, 14]
+	>>>
+
+::
+
+	>>> my_list = [23, 21, 412]
+	>>> my_list.print_sorted()
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in <module>
+	AttributeError: 'list' object has no attribute 'print_sorted'
+	>>>
+
+::
+
+	>>> MyList = __import__('1-my_list').MyList
+	>>> my_list = MyList()
+	>>> my_list.append(0)
+	>>> my_list.append(13)
+	>>> my_list.append(-11)
+	>>> my_list.append(511)
+	>>> my_list.append(-511)
+	>>> my_list.print_sorted()
+	[-511, -11, 0, 13, 511]
+	>>>
