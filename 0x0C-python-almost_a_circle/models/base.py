@@ -97,3 +97,5 @@ class Base:
             with open(f_name, "r") as jsonfile:
                 l_dicts = Base.from_json_string(jsonfile.read())
                 return [cls.create(**di) for di in l_dicts]
+        except IOError:
+            return []
