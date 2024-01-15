@@ -60,7 +60,7 @@ class Base:
         Args:
             json_string (str): A JSON str representation of a list of dicts.
         Returns:
-            If json_string None\empty - empty list.
+            If json_string None or empty - empty list.
             Otherwise - Python list represented by json_string.
         """
         if json_string is None or json_string == "[]":
