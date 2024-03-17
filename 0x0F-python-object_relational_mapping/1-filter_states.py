@@ -6,8 +6,8 @@ import sys
 import MySQLdb
 
 if __name__ == '__main__':
-    database = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2],
-                         db=sys.argv[3], port=3306)
+    dB = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2],
+                         dB=sys.argv[3], port=3306)
 
     mouse = database.cursor()
     mouse.execute("SELECT * \
