@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Lists all states with a name starting with N
+Lists values in table that match provided arg
 """
 import sys
 import MySQLdb
@@ -13,9 +13,8 @@ if __name__ == '__main__':
     mouse.execute("SELECT * \
     FROM states \
     WHERE CONVERT(`name` USING Latin1) \
-    COLLATE Latin1_General_CS \
-    LIKE 'N%';")
-    Nstate = mouse.fetchall()
+    COLLATE Latin1_General_CS = '{}';".format(sys.argv[4]))
+    matches = mouse.fetchall()
 
-    for N in Nstate:
-        print(N)
+    for match in matches:
+        print(match)

@@ -6,12 +6,12 @@ import sys
 import MySQLdb
 
 if __name__ == '__main__':
-    dB = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2],
-                         dB=sys.argv[3], port=3306)
+    connection = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2],
+                         db=sys.argv[3], port=3306)
 
-    tred = database.cursor()
-    tred.execute("SELECT * FROM states;")
-    states = tred.fetchall()
+    mouse = connection.cursor()
+    mouse.execute("SELECT * FROM states;")
+    states = mouse.fetchall()
 
     for state in states:
         print(state)
